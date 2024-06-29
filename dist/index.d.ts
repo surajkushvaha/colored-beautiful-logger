@@ -1,2 +1,2 @@
-import Logger from './logger';
-export { Logger };
+import NodeLogger from './logger';
+export { NodeLogger };
