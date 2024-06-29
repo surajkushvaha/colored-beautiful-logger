@@ -49,46 +49,46 @@ export interface Logger {
      * Logs an error message.
      * @param message The error message to log.
      */
-    error(message: string): void;
+    error(message: any): void;
     /**
      * Logs a warning message.
      * @param message The warning message to log.
      */
-    warning(message: string): void;
+    warning(message: any): void;
     /**
      * Logs an informational message.
      * @param message The informational message to log.
      */
-    info(message: string): void;
+    info(message: any): void;
     /**
      * Logs a success message.
      * @param message The success message to log.
      */
-    success(message: string): void;
+    success(message: any): void;
     /**
      * Logs a general message.
      * @param message The message to log.
      */
-    log(message: string): void;
+    log(message: any): void;
     /**
      * Logs a notification message.
      * @param message The notification message to log.
      */
-    notify(message: string): void;
+    notify(message: any): void;
     /**
      * Logs an alert message.
      * @param message The alert message to log.
      */
-    alert(message: string): void;
+    alert(message: any): void;
     /**
      * Logs a critical message.
      * @param message The critical message to log.
      */
-    critical(message: string): void;
+    critical(message: any): void;
     /**
      * Additional custom logging methods.
      */
-    [key: string]: ((message: string) => void);
+    [key: string]: ((message: any) => void);
 }
 /**
  * Interface representing custom labels with associated colors.

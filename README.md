@@ -15,7 +15,7 @@ npm install colored-beautiful-logger
 ## Usage
 
 To use the logger, import it into your file:
-
+take ANSI color refrence from [here](https://talyian.github.io/ansicolors/)
 ```typescript
 import {Logger, LoggerOptions, Color} from 'colored-beautiful-logger';
 const options: LoggerOptions = {
@@ -25,7 +25,9 @@ const options: LoggerOptions = {
   saveLogFile: true,
   customLabels: [
     // take ANSI color refrence from https://talyian.github.io/ansicolors/
-    { color: Color.MAGNENTA, label: 'custom' },
+    { label: 'custom', color: Color.MAGNENTA },
+    { label: 'unique', color: Color['\u001b[38;5;213m'] },
+    { label: 'insideFunction', color: Color['\u001b[38;5;200m'] }
   ],
   printTimestamp: true,
   printLabelName: true,
@@ -34,15 +36,29 @@ const options: LoggerOptions = {
 
 const {logger} = new Logger(options);
 
+let test = ()=>{
+  logger.insideFunction('Inside a function');
+}
+test();
 logger.info('This is an informational message');
 logger.warning('This is a warning message');
 logger.error('This is an error message');
 logger.custom('This is a custom message');
+logger.critical('This is a critical message');
+logger.alert('This is a alert message');
+logger.log('This is a log message');
+logger.notify('This is a notify message');
+logger.success('This is a success message');
+logger.unique('We are happy')
 ```
 
 ## Result
 
-![alt text](image.png)
+![Console Output Image](image.png)
+
+## Changelogs
+
+See Changelog [here](changelog.md) for more information.
 
 ## API Documentation
 
@@ -68,7 +84,7 @@ The Colored Logger provides the following interfaces and methods:
 
 ## Contributing
 
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/surajkushvaha/colored-beautiful-logger#readme).
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/surajkushvaha/colored-beautiful-logger/issues).
 
 ## License
 

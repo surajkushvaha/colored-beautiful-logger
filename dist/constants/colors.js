@@ -279,4 +279,4 @@ var Color;
     Color["\u001B[38;5;253m"] = "\u001B[38;5;253m";
     Color["\u001B[38;5;254m"] = "\u001B[38;5;254m";
     Color["\u001B[38;5;255m"] = "\u001B[38;5;255m";
-})(Color = exports.Color || (exports.Color = {}));
+})(Color || (exports.Color = Color = {}));
