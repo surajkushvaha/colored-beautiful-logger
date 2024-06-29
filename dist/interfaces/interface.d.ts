@@ -7,35 +7,35 @@ export interface MAPPED_LABEL {
     /**
      * Label for error messages.
      */
-    ERROR: string;
+    error: string;
     /**
      * Label for warning messages.
      */
-    WARNING: string;
+    warning: string;
     /**
      * Label for informational messages.
      */
-    INFO: string;
+    info: string;
     /**
      * Label for success messages.
      */
-    SUCCESS: string;
+    success: string;
     /**
      * Label for general log messages.
      */
-    LOG: string;
+    log: string;
     /**
      * Label for notification messages.
      */
-    NOTIFY: string;
+    notify: string;
     /**
      * Label for alert messages.
      */
-    ALERT: string;
+    alert: string;
     /**
      * Label for critical messages.
      */
-    CRITICAL: string;
+    critical: string;
     /**
      * Additional custom labels.
      */
@@ -132,9 +132,9 @@ export interface LoggerOptions {
      */
     printTimestamp?: boolean;
     /**
-     * Whether to print the caller function name in each log entry.
+     * Whether to print the label name in each log entry.
      */
-    printCallerFunctionName?: boolean;
+    printLabelName?: boolean;
     /**
      * Whether to print the caller function location in each log entry.
      */

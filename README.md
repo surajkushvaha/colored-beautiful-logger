@@ -24,11 +24,11 @@ const options: LoggerOptions = {
   logRotationInterval: 60000, // 1 minute
   saveLogFile: true,
   customLabels: [
-    //always give label name in smallcase format
+    // take ANSI color refrence from https://talyian.github.io/ansicolors/
     { color: Color.MAGNENTA, label: 'custom' },
   ],
   printTimestamp: true,
-  printCallerFunctionName: true,
+  printLabelName: true,
   printCallerFunctionLocation: true,
 };
 
