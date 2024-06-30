@@ -1,4 +1,3 @@
-import { Color } from "../constants/colors";
 /**
  * Interface representing mapped labels for different log levels.
  * Each key is a log level, and the value is the corresponding label.
@@ -7,39 +6,39 @@ export interface MAPPED_LABEL {
     /**
      * Label for error messages.
      */
-    error: string;
+    error: COLOR;
     /**
      * Label for warning messages.
      */
-    warning: string;
+    warning: COLOR;
     /**
      * Label for informational messages.
      */
-    info: string;
+    info: COLOR;
     /**
      * Label for success messages.
      */
-    success: string;
+    success: COLOR;
     /**
      * Label for general log messages.
      */
-    log: string;
+    log: COLOR;
     /**
      * Label for notification messages.
      */
-    notify: string;
+    notify: COLOR;
     /**
      * Label for alert messages.
      */
-    alert: string;
+    alert: COLOR;
     /**
      * Label for critical messages.
      */
-    critical: string;
+    critical: COLOR;
     /**
      * Additional custom labels.
      */
-    [key: string]: string;
+    [key: string]: COLOR;
 }
 /**
  * Interface representing a logger with various logging methods.
@@ -97,7 +96,7 @@ export interface customLabels {
     /**
      * The color associated with the label.
      */
-    color: Color;
+    color: COLOR;
     /**
      * The custom label text.
      */
@@ -140,3 +139,17 @@ export interface LoggerOptions {
      */
     printCallerFunctionLocation?: boolean;
 }
+export interface RGBColor {
+    R: number;
+    G: number;
+    B: number;
+    isBackground?: boolean;
+}
+export interface AnsiColorResult {
+    color: RGBColor;
+    isBackground: boolean;
+}
+export interface AnsiColor {
+    ansiCode: string;
+}
+export type COLOR = "BLACK" | "RED" | "GREEN" | "YELLOW" | "BLUE" | "CYAN" | "WHITE" | "BLACKBG" | "REDBG" | "GREENBG" | "YELLOWBG" | "BLUEBG" | "MEGENTABG" | "CYANBG" | "WHITEBG" | "RESET" | RGBColor | AnsiColor;

@@ -93,6 +93,39 @@ export default class NodeLogger {
      */
     private log;
     /**
+     * give formatted message according to options
+     * @private
+     * @param label
+     * @param message
+     * @returns {string}
+     */
+    private formatMessage;
+    /**
+     * log for browser console
+     * @private
+     * @param formattedMessage
+     * @param mappedLabelColor
+     * @param message
+     * @returns {void}
+     */
+    private logToBrowser;
+    /**
+     * log for node console
+     * @private
+     * @param formattedMessage
+     * @param mappedLabelColor
+     * @param message
+     * @returns {void}
+     */
+    private logToNode;
+    /**
+     * @private
+     * @param formattedMessage
+     * @param message
+     * @returns {void}
+     */
+    private saveToFile;
+    /**
      * Creates a write stream for the log file and sets up log rotation.
      * @private
      * @param {LoggerOptions} options - Logger options.
@@ -111,4 +144,53 @@ export default class NodeLogger {
      * @returns {void}
      */
     private rotateLogFile;
+    /**
+     * Retrieves the color string suitable for browser console styling based on the provided color configuration.
+     * Converts ANSI escape sequences to RGB format if necessary.
+     * @private
+     * @param {COLOR} mappedLabelColor - The color configuration for the label.
+     * @returns {string} The CSS style string for setting text color in the browser console.
+     */
+    private getColorStringForBrowser;
+    /**
+     * Retrieves the ANSI escape sequence or color code suitable for Node.js console styling based on the provided color configuration.
+     * Converts RGB colors to ANSI escape sequences if necessary.
+     * @private
+     * @param {COLOR} mappedLabelColor - The color configuration for the label.
+     * @returns {string} The ANSI escape sequence or color code for setting text color in the Node.js console.
+     */
+    private getColorStringForNode;
+    /**
+     * Converts an 8-bit ANSI color code to an RGB value.
+     * @private
+     * @param {number} code - The 8-bit ANSI color code.
+     * @returns {RGBColor} The RGB value as an object {R, G, B}.
+     */
+    private ansiToRgb;
+    /**
+     * Finds the closest ANSI color code to the given RGB value.
+     * @private
+     * @param {RGBColor} color - The RGB color object {R, G, B}.
+     * @returns {number} The closest 8-bit ANSI color code.
+     */
+    private rgbToAnsi;
+    /**
+     * Extracts the ANSI color code from an escape sequence and converts it to RGB.
+     * @private
+     * @param {string} ansi - The ANSI escape sequence.
+     * @returns {AnsiColorResult} An object containing the RGB value and background flag.
+     */
+    private ansiEscapeToRgb;
+    /**
+     * Check if it is Browser Environment
+     * @private
+     * @returns {boolean}
+     */
+    private isItBrowser;
+    /**
+     * Check if it is Node Environment
+     * @private
+     * @returns {boolean}
+     */
+    private isItNode;
 }

@@ -1,26 +1,35 @@
-## Release Varsion 0.0.0
+## Release Version 0.0.0
 
-- initial release
+- Initial release.
 
 ## Release Version 1.0.0
 
-- first offical release with all working fucntionalies
+- First official release with all working functionalities.
 
 ## Release Version 1.0.1
 
-- Customize labels and colors according to your preferences.
-- Save logs to a file for future reference.
-- Colorize console output to suit your visual preferences.
-- Include timestamps in your log entries for better time tracking.
-- Display messages with function names and their corresponding paths for easy debugging.
+- Added customization options for labels and colors.
+- Enabled saving logs to a file for future reference.
+- Introduced colorized console output for better visual differentiation.
+- Included timestamps in log entries for better time tracking.
+- Displayed messages with function names and their corresponding paths for easier debugging.
 
 ## Release Version 1.0.2
 
-- removed requirment of smaller case label now we use name as we want
-- changed `printCallerFunctionName` to `printLabelName` instead in `LoggerOptions`
+- Removed the requirement for lowercase labels; labels can now be named freely.
+- Changed the `printCallerFunctionName` option to `printLabelName` in `LoggerOptions`.
 
 ## Release Version 1.0.3
 
-- removed unused dependencies packages
-- changed logger functions parameter type `string` to `any` show we can log all type of messages
-- upgrade dependencies packages to latest version
+- Removed unused dependency packages.
+- Changed logger function parameter type from `string` to `any` to allow logging of all types of messages.
+- Upgraded dependency packages to the latest versions.
+
+## Release Version 2.0.0
+
+- Removed the previous method of setting colors using an enum.
+- Introduced the ability to add any color of choice based on ANSI Color codes, RGB values, or existing predefined colors, which are now defined using a type.
+- Enabled colorful message logging in the browser console as well.
+- Improved documentation for all interfaces and methods.
+- Removed the `Color` enum from exports.
+
