@@ -37,3 +37,7 @@
 ## Release Version 2.0.1
 
 - Minor Fixes
+
+## Release Version 2.0.2 
+
+- Minor fixes where rgb stop working by previous changes
