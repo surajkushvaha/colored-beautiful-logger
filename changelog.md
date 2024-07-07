@@ -33,3 +33,7 @@
 - Improved documentation for all interfaces and methods.
 - Removed the `Color` enum from exports.
 
+
+## Release Version 2.0.1
+
+- Minor Fixes
