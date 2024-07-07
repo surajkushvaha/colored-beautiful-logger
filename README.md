@@ -208,3 +208,11 @@ If you find any bugs or have suggestions for improvements, please open an issue 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/surajkushvaha/colored-beautiful-logger/blob/main/LICENSE) file for more information.
+
+## Refrences
+
+- https://github.com/microsoft/vscode/issues/158827
+- https://www.npmjs.com/package/chalk
+- https://en.wikipedia.org/wiki/ANSI_escape_code
+
+
